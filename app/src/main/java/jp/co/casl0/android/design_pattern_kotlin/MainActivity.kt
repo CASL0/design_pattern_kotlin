@@ -2,10 +2,18 @@ package jp.co.casl0.android.design_pattern_kotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val chapterList = mutableListOf(getString(R.string.chapter_1))
+        val adapter = ChapterListAdapter(this, chapterList)
+
+        var chapterRecyclerView: RecyclerView = findViewById(R.id.chapterRecyclerView)
+        chapterRecyclerView.adapter = adapter
+        chapterRecyclerView.layoutManager = LinearLayoutManager(this)
     }
 }
