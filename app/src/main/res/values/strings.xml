@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">design_pattern_kotlin</string>
-    <string name="chapter_1">Chapter1 Iterator</string>
+    <string name="chapter_1">Chapter1 Iteratorパターン</string>
+    <string name="chapter_2">Chapter2 Adapterパターン</string>
 </resources>

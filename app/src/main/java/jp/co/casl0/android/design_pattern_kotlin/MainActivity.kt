@@ -9,7 +9,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val chapterList = mutableListOf(getString(R.string.chapter_1))
+        val chapterList = mutableListOf(
+            getString(R.string.chapter_1),
+            getString(R.string.chapter_2)
+        )
         val adapter = ChapterListAdapter(this, chapterList)
 
         var chapterRecyclerView: RecyclerView = findViewById(R.id.chapterRecyclerView)
