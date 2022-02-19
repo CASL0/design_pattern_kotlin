@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import jp.co.casl0.android.design_pattern_kotlin.adapter.AdapterActivity
 import jp.co.casl0.android.design_pattern_kotlin.iterator.IteratorActivity
+import jp.co.casl0.android.design_pattern_kotlin.template.TemplateActivity
 
 class ChapterListAdapter(private val context: Context, private val chapterList: MutableList<String>):
     RecyclerView.Adapter<ChapterListAdapter.ChapterViewHolder>() {
@@ -28,6 +29,7 @@ class ChapterListAdapter(private val context: Context, private val chapterList: 
             val activities = arrayListOf(
                 IteratorActivity::class.java,
                 AdapterActivity::class.java,
+                TemplateActivity::class.java,
             )
             val intent = Intent(context, activities[position])
             context.startActivity(intent)
