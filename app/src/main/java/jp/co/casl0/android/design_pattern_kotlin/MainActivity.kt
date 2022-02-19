@@ -2,6 +2,7 @@ package jp.co.casl0.android.design_pattern_kotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -14,9 +15,11 @@ class MainActivity : AppCompatActivity() {
             getString(R.string.chapter_2)
         )
         val adapter = ChapterListAdapter(this, chapterList)
+        val itemDecorator = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
 
-        var chapterRecyclerView: RecyclerView = findViewById(R.id.chapterRecyclerView)
+        val chapterRecyclerView: RecyclerView = findViewById(R.id.chapterRecyclerView)
         chapterRecyclerView.adapter = adapter
         chapterRecyclerView.layoutManager = LinearLayoutManager(this)
+        chapterRecyclerView.addItemDecoration(itemDecorator)
     }
 }
