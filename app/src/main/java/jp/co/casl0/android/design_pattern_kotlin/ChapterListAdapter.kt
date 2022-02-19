@@ -1,17 +1,19 @@
 package jp.co.casl0.android.design_pattern_kotlin
 
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import jp.co.casl0.android.design_pattern_kotlin.iterator.IteratorActivity
 
-class ChapterListAdapter(context: Context, chapterList: MutableList<String>):
+class ChapterListAdapter(private val context: Context, private val chapterList: MutableList<String>):
     RecyclerView.Adapter<ChapterListAdapter.ChapterViewHolder>() {
     private val _inflater: LayoutInflater = LayoutInflater.from(context)
-    private var _chapterList = chapterList
 
     inner class ChapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
         var chapterTextView: TextView = itemView.findViewById(R.id.textView)
@@ -22,8 +24,9 @@ class ChapterListAdapter(context: Context, chapterList: MutableList<String>):
 
         override fun onClick(v: View?) {
             val position = layoutPosition
-            val chapter = _chapterList[position]
-            Log.d(this::class.java.simpleName, "chapter: $chapter")
+            val activities = arrayListOf(IteratorActivity::class.java)
+            val intent = Intent(context, activities[position])
+            context.startActivity(intent)
         }
     }
 
@@ -33,11 +36,11 @@ class ChapterListAdapter(context: Context, chapterList: MutableList<String>):
     }
 
     override fun onBindViewHolder(holder: ChapterViewHolder, position: Int) {
-        val text = _chapterList[position]
+        val text = chapterList[position]
         holder.chapterTextView.text = text
     }
 
     override fun getItemCount(): Int {
-        return _chapterList.size
+        return chapterList.size
     }
 }
