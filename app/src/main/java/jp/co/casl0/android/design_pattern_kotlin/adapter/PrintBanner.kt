@@ -1,6 +1,6 @@
 package jp.co.casl0.android.design_pattern_kotlin.adapter
 
-class PrintBanner(string: String): Banner(string), Print {
+class PrintBanner(string: String): IBanner by Banner(string),Print {
     override fun printWeak(): String {
         return showWithParen()
     }
