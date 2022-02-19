@@ -14,7 +14,7 @@ class TemplateActivity : AppCompatActivity() {
         setContentView(R.layout.activity_template)
         val textView = findViewById<TextView>(R.id.templateTextView)
 
-        val display: AbstractDisplay = CharDisplay('H')
+        val display: AbstractDisplay = StringDisplay("こんにちは")
         display.displayString.onEach {
             textView.text = it
         }.launchIn(GlobalScope)
