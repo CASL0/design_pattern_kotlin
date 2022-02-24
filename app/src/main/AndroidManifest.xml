@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design_pattern_kotlin">
         <activity
+            android:name=".abstract_factory.AbstractFactoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".builder.BuilderActivity"
             android:exported="false" />
         <activity
