@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import jp.co.casl0.android.design_pattern_kotlin.abstract_factory.AbstractFactoryActivity
 import jp.co.casl0.android.design_pattern_kotlin.adapter.AdapterActivity
+import jp.co.casl0.android.design_pattern_kotlin.bridge.BridgeActivity
 import jp.co.casl0.android.design_pattern_kotlin.builder.BuilderActivity
 import jp.co.casl0.android.design_pattern_kotlin.factory_method.FactoryMethodActivity
 import jp.co.casl0.android.design_pattern_kotlin.iterator.IteratorActivity
@@ -42,6 +43,7 @@ class ChapterListAdapter(
                 PrototypeActivity::class.java,
                 BuilderActivity::class.java,
                 AbstractFactoryActivity::class.java,
+                BridgeActivity::class.java,
             )
             val intent = Intent(context, activities[position])
             context.startActivity(intent)

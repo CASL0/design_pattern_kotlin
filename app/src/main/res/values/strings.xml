@@ -11,4 +11,5 @@
     <string name="button_html_builder">HTML BUILDER</string>
     <string name="chapter_7">Chapter7 Builderパターン</string>
     <string name="chapter_8">Chapter8 AbstractFactoryパターン</string>
+    <string name="chapter_9">Chapter9 Bridgeパターン</string>
 </resources>
