@@ -14,6 +14,7 @@ import jp.co.casl0.android.design_pattern_kotlin.adapter.AdapterActivity
 import jp.co.casl0.android.design_pattern_kotlin.bridge.BridgeActivity
 import jp.co.casl0.android.design_pattern_kotlin.builder.BuilderActivity
 import jp.co.casl0.android.design_pattern_kotlin.composite.CompositeActivity
+import jp.co.casl0.android.design_pattern_kotlin.decorator.DecoratorActivity
 import jp.co.casl0.android.design_pattern_kotlin.factory_method.FactoryMethodActivity
 import jp.co.casl0.android.design_pattern_kotlin.iterator.IteratorActivity
 import jp.co.casl0.android.design_pattern_kotlin.prototype.PrototypeActivity
@@ -46,6 +47,7 @@ class ChapterListAdapter(
                 AbstractFactoryActivity::class.java,
                 BridgeActivity::class.java,
                 CompositeActivity::class.java,
+                DecoratorActivity::class.java,
             )
             val intent = Intent(context, activities[position])
             context.startActivity(intent)
