@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
             getString(R.string.chapter_7),
             getString(R.string.chapter_8),
             getString(R.string.chapter_9),
+            getString(R.string.chapter_11),
         )
         val adapter = ChapterListAdapter(this, chapterList)
         val itemDecorator = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design_pattern_kotlin">
         <activity
+            android:name=".composite.CompositeActivity"
+            android:exported="false" />
+        <activity
             android:name=".bridge.BridgeActivity"
             android:exported="false" />
         <activity
