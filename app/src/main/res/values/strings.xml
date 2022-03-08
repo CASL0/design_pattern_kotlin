@@ -14,4 +14,6 @@
     <string name="chapter_9">Bridgeパターン</string>
     <string name="chapter_11">Compositeパターン</string>
     <string name="chapter_12">Decoratorパターン</string>
+    <string name="chapter_17">Observerパターン</string>
+    <string name="chapter_14">Chain of Responsibilityパターン</string>
 </resources>
